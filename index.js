@@ -21,8 +21,8 @@ var databaseOperation = require('./databaseOperation');
     })
   });
 
-  app.post("/nvgh/laydonhang/",(req,res)=>{
-    databaseOperation.lay_Danh_Sach_Don_Hang_Can_Giao(req.body.id).then(result=>{
+  app.all("/nvgh/laydonhang/",(req,res)=>{
+    databaseOperation.lay_Danh_Sach_Don_Hang_Can_Giao(req.query.id).then(result=>{
       res.json(result);
     })
   })
