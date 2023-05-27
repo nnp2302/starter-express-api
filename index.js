@@ -24,7 +24,7 @@ var databaseOperation = require('./databaseOperation');
   app.all("/nvgh/laydonhang/",(req,res)=>{
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    databaseOperation.lay_Danh_Sach_Don_Hang_Can_Giao(req.query.id).then(result=>{
+    databaseOperation.lay_Danh_Sach_Don_Hang_Can_Giao(req.body.id).then(result=>{
       res.json(result);
     })
   })
